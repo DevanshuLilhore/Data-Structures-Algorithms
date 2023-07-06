@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 class Stack
 {
@@ -8,11 +7,11 @@ class Stack
     public:
         Stack()
         {
-            top=-1
+            top=-1;
         }
         ~Stack()
         {
-            top=-1
+            top=-1;
         }
         int push(int value)
         {
@@ -38,7 +37,7 @@ class Stack
         }
         int isStackEmpty()
         {
-            if(top==-1)
+            if(top == -1)
             {
                 return 1;
             }
@@ -58,9 +57,9 @@ class Stack
                 return s[top--];
             }
         }
-        int top()
+        int Top()
         {
-            if(isStackEmoty())
+            if(isStackEmpty())
             {
                 cout<<"Stack Underflow"<<endl;
             }
@@ -69,14 +68,16 @@ class Stack
                 return s[top];
             }
         }
-        int size()
+        int Size()
         {
             return top+1;
         }
         
-}
+};
+
 int main()
 {
+    Stack s;
     int choice;
     while(choice!=5)
     {
@@ -85,6 +86,40 @@ int main()
         cout<<"3.Get Top"<<endl;
         cout<<"4.Get size"<<endl;
         cout<<"5.Exit"<<endl;
+        cout<<"Enter your choice"<<endl;
+        cin>>choice;
+        switch(choice)
+        {
+            case 1:
+            {
+                int value;
+                cout<<"Enter a number"<<endl;
+                cin>>value;
+                s.push(value);
+                break;
+            }
+             case 2:
+            {
+                int value=s.pop();
+                cout<<"Deleted value is "<<value<<endl;
+                break;
+            }
+             case 3:
+            {
+                cout<<"Top of the stack is"<<s.Top()<<endl;
+                break;
+            }
+             case 4:
+            {
+                
+                cout<<"Size of stack is"<<s.Size();
+                break;
+            }
+             case 5:
+            {
+                exit(0);
+            }
+        }
         
     }
     return 0;
