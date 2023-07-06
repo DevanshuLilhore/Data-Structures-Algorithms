@@ -15,14 +15,14 @@ class DynamicArray
         {
             return capacity;
         }
-        DynamicArray()
+        DynamicArray()                //Cunstructor
         {
             array=new int[1];
             size=0;
             capacity=1;
             
         }
-        ~DynamicArray()
+        ~DynamicArray()             //Distructor
         {
             delete []array;
             size=0;
