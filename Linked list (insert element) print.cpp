@@ -31,7 +31,7 @@ class LinkedList
             else
             {
                 node *t=head;
-                while(head->next!=NULL)
+                while(t->next!=NULL)
                 {
                     t=t->next;
                 }
