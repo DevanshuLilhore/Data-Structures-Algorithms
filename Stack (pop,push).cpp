@@ -5,7 +5,7 @@ class Stack
     int s[100];
     int top;
     public:
-        Stack()
+        Stack()  
         {
             top=-1;
         }
@@ -13,7 +13,7 @@ class Stack
         {
             top=-1;
         }
-        int push(int value)
+        int push(int value)   // insert element
         {
             if(isStackFull())
             {
@@ -24,7 +24,7 @@ class Stack
                 s[++top]=value;
             }
         }
-        int isStackFull()
+        int isStackFull()     // Cheak stack full
         {
             if(top==99)
             {
@@ -35,7 +35,7 @@ class Stack
                 return 0;
             }
         }
-        int isStackEmpty()
+        int isStackEmpty()    // Cheak stack empty
         {
             if(top == -1)
             {
@@ -46,7 +46,7 @@ class Stack
                 return 0;
             }
         }
-        int pop()
+        int pop()    // delete element
         {
             if(isStackEmpty())
             {
@@ -57,7 +57,7 @@ class Stack
                 return s[top--];
             }
         }
-        int Top()
+        int Top()      // Return top element
         {
             if(isStackEmpty())
             {
@@ -68,7 +68,7 @@ class Stack
                 return s[top];
             }
         }
-        int Size()
+        int Size()      // array size return
         {
             return top+1;
         }
